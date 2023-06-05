@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project_2
+{
+    internal class Methods
+    {
+        //Menus
+        public enum MainMenu
+        {
+            Breakfast = 1,
+            Lunch,
+            Dinner,
+            Desserts,
+            Burgers,
+            Pizza,
+            Snacks,
+            HotDrinks,
+            ColdDrinks,
+            Checkout
+        }
+        public enum Breakfast
+        {
+            /*
+            Classic_American_Breakfast - ZAR 79.99
+            Healthy_Bowl - ZAR 64.99
+            Veggie_Omelette - ZAR 72.99
+            Pancakes_with_a_Twist - ZAR 59.99
+            Breakfast_Burrito - ZAR 89.99
+            */
+            Classic_American_Breakfast = 1,
+            Healthy_Bowl,
+            Veggie_Omelette,
+            Pancakes_with_a_Twist,
+            Breakfast_Burrito
+        }
+        public enum Lunch
+        {
+
+        }
+        public enum Dinner
+        {
+
+        }
+        public enum Desserts
+        {
+
+        }
+        public enum Burgers
+        {
+
+        }
+        public enum Pizza
+        {
+
+        }
+        public enum Snacks
+        {
+
+        }
+        public enum HotDrinks
+        {
+
+        }
+        public enum ColdDrinks
+        {
+
+        }
+
+        //Methods
+        public static void DisplayMainMenu()
+        {
+            int count = 0;
+            Console.WriteLine("Welcome to QuikGo FoodToGO!");
+            foreach (string menuItem in Enum.GetNames(typeof(MainMenu)))
+            {
+                count++;
+                Console.WriteLine($"{count}. {menuItem}");
+            }
+        }
+    }
+}
